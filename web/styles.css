@@ -1,0 +1,203 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17212b;
+  background: #f3f6f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 0.45rem;
+  color: #fff;
+  background: #155eef;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #84adff;
+  outline-offset: 2px;
+}
+
+.page-shell {
+  width: min(100% - 2rem, 60rem);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  margin: 0.2rem 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #475467;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel,
+.task-card {
+  margin: 1rem 0;
+  padding: 1.25rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(16 24 40 / 6%);
+}
+
+.panel h2,
+.category-group h3,
+.status-group h4 {
+  margin-top: 0;
+}
+
+#task-form,
+.filter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.65rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 2.65rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #98a2b3;
+  border-radius: 0.4rem;
+  color: inherit;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#task-form button {
+  margin-top: 0.45rem;
+  justify-self: start;
+}
+
+.list-status {
+  color: #475467;
+}
+
+.empty-state {
+  padding: 1.5rem;
+  border: 1px dashed #98a2b3;
+  border-radius: 0.55rem;
+  color: #475467;
+  text-align: center;
+}
+
+.category-group {
+  margin: 1.5rem 0;
+}
+
+.category-group h3 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.status-group {
+  margin: 1rem 0;
+}
+
+.status-group h4 {
+  margin-bottom: 0.5rem;
+  color: #344054;
+}
+
+.task-card h5 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.task-card p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.task-meta {
+  color: #475467;
+  font-size: 0.9rem;
+}
+
+.task-status {
+  max-width: 14rem;
+}
+
+dialog {
+  width: min(100% - 2rem, 28rem);
+  padding: 0;
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 3rem rgb(16 24 40 / 24%);
+}
+
+dialog::backdrop {
+  background: rgb(16 24 40 / 55%);
+}
+
+.dialog-content {
+  padding: 1.5rem;
+}
+
+.dialog-content h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 42rem) {
+  .page-shell {
+    padding-top: 3rem;
+  }
+
+  #task-form,
+  .filter-grid {
+    grid-template-columns: 10rem minmax(0, 1fr);
+    align-items: center;
+  }
+
+  #task-form textarea {
+    grid-column: 2;
+  }
+
+  #task-form button {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Organiza tus tareas por categoría y estado.">
+    <title>Mis tareas</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">Organización personal</p>
+        <h1>Mis tareas</h1>
+        <p>Crea tareas, organiza tus pendientes y sigue su progreso.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="create-heading">
+        <h2 id="create-heading">Nueva tarea</h2>
+        <form id="task-form" novalidate>
+          <label for="title">Título</label>
+          <input id="title" name="title" type="text" aria-required="true">
+          <label for="description">Descripción (opcional)</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+          <label for="category">Categoría</label>
+          <input id="category" name="category" type="text" aria-required="true">
+          <label for="due-date">Fecha límite</label>
+          <input id="due-date" name="due_date" type="date" aria-required="true">
+          <button type="submit">Crear tarea</button>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filtrar tareas</h2>
+        <div class="filter-grid">
+          <label for="filter-status">Estado</label>
+          <select id="filter-status" name="status">
+            <option value="">Todos</option>
+            <option value="backlog">Pendiente</option>
+            <option value="in progress">En progreso</option>
+            <option value="done">Finalizada</option>
+          </select>
+          <label for="filter-from">Desde</label>
+          <input id="filter-from" name="from" type="date">
+          <label for="filter-to">Hasta</label>
+          <input id="filter-to" name="to" type="date">
+          <label for="filter-name">Nombre</label>
+          <input id="filter-name" name="name" type="search">
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">Tareas</h2>
+        <p id="list-status" class="list-status" aria-live="polite"></p>
+        <div id="task-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <dialog id="error-dialog" aria-labelledby="error-heading">
+      <div class="dialog-content">
+        <h2 id="error-heading">No se pudo completar la acción</h2>
+        <p id="error-message"></p>
+        <button id="error-close" type="button">Cerrar</button>
+      </div>
+    </dialog>
+
+    <script src="/js/tasks.js" defer></script>
+    <script src="/js/api.js" defer></script>
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>

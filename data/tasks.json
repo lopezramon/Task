@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "c7724d73-3083-4abd-9af3-4c6574dc0abf",
+      "title": "organizar cuarto",
+      "description": "recojer ropa \narreglar cama",
+      "category": "habito",
+      "due_date": "2026-10-25",
+      "status": "in progress",
+      "created_at": "2026-10-24",
+      "completed_at": null
+    },
+    {
+      "id": "7839c775-efef-41a6-887d-d75ed517e0c7",
+      "title": "doblar ropa",
+      "description": "doblar ropa",
+      "category": "habito",
+      "due_date": "2026-11-08",
+      "status": "backlog",
+      "created_at": "2026-10-24",
+      "completed_at": null
+    },
+    {
+      "id": "cccc456c-bb58-4051-900a-04090e4ce4c1",
+      "title": "pasear mascota",
+      "description": "",
+      "category": "habito",
+      "due_date": "2026-11-08",
+      "status": "in progress",
+      "created_at": "2026-10-24",
+      "completed_at": null
+    },
+    {
+      "id": "061124e5-379d-4bd7-97de-143461b94bf4",
+      "title": "imprimir documento",
+      "description": "imprimir proyecto",
+      "category": "tareas",
+      "due_date": "2026-10-29",
+      "status": "done",
+      "created_at": "2026-10-24",
+      "completed_at": "2026-10-24"
+    }
+  ]
+}
