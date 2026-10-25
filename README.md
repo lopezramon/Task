@@ -1,4 +1,4 @@
-# Task MVP
+# Task MVP - euglis lopez
 
 Aplicación web sencilla para registrar tareas personales, organizarlas por categorías y estado, y encontrarlas mediante filtros. La interfaz y los mensajes están en español. Las categorías son texto abierto.
 
